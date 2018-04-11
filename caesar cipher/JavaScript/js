@@ -3,17 +3,6 @@ var aUppZ = 90;
 var aLowA = 97;
 var aLowZ = 122;
 
-var phrase = prompt("Ingresa una frase  \n ***números, carácteres extaños o espacios no son válidos***")
-
-function validatePhrase (phrase) {
-  if (phrase.length == "0") {
-    phrase = prompt("Ingresa una frase válida");
-  }
-  for (var i = 0; i < phrase.length; i++){
-     var characterCode = input.charCodeAt(i);//codigo ASCII de cada caracter para validar que se trate de solo letras.
-    if (characterCode < aUppA && characterCode > aUppZ || characterCode < aLowA && characterCode > aLowZ) {// validando rango ASCII de cada caracter para todas las letras
-    input = prompt("Ingresa una cadena valida ");
+do {var phrase = prompt("Ingresa una frase  \n ***números, carácteres extaños o espacios no son válidos***");
     }
-  }
-  return phrase
-}
+    while (!phrase || !/^[a-zA-Z]*$/.test(phrase));
