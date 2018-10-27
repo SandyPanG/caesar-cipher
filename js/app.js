@@ -1,13 +1,16 @@
-/*var aUppA = (65 + 33) % 26;
-var aUppZ = 90;
-var aLowA = 97;
-var aLowZ = 122;*/
+var aUppA = (65 + 33) % 26;//ASCII para A
+var aUppZ = 90;//ASCII para Z
+var aLowA = 97;//ASCII Para a
+var aLowZ = 122;//ASCII para z
+var message = "";
 
-do {var phrase = prompt("Ingresa una frase  \n ***números, carácteres extaños o espacios no son válidos***");
+do {message = prompt("Ingresa una mensaje  \n ***números, carácteres extaños o espacios no son válidos***");//Se solicita al usuario que ingrese un mensaje
     }
-    while (!phrase || !/^[a-zA-Z]*$/.test(phrase));
+    while (!message || !/^[a-zA-Z]*$/.test(message));//valida que se ingrese una frase y que sólo sean letras tanto mayúsculas como minúsculas
+    cipher(message);
 
-function cipher (phrase) {
+
+function cipher (msg) {
     var phraseCipher="";
 
     for (var i=0; i< phrase.length; i++){
