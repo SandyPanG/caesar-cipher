@@ -22,13 +22,15 @@ function cipher (msg) {//función para cifrar el mensaje
         
         
 
-    if((coAscii >= 65)  && (codAscii <= 90)) {
-        var asciiCipherNum = ((codAscii -65 +33)% 26) + 65
+    if((codAscii >= 65)  && (codAscii <= 90)) {//funcion para identificar mayusculas y minusculas en el código ascii
+        codNumAscii = ((codAscii -65 + 33) % 26) + 65;// se aplica la fórmula para ascii mayusculas
       } else {
-        var asciiCipherNum = ((codAscii -97 + 33) % 26) +97
+        codNumAscii = ((codAscii -97 + 33) % 26) +97// fórmula para ascii minusculas
       }
-      var newLetter = String.fromChartCode(asciiCipherNum);
-      phraseCipher += newLetter;
+      var newLetter = String.fromCharCode(codNumAscii);
+      encryption += newLetter;
+      console.log(newLetter);
+      
       }
-      return phraseCipher;
+      return encryption;
     }
