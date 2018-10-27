@@ -10,13 +10,19 @@ do {message = prompt("Ingresa una mensaje  \n ***números, carácteres extaños 
     cipher(message);
 
 
-function cipher (msg) {
-    var phraseCipher="";
+function cipher (msg) {//función para cifrar el mensaje
+    var encryption = "";
 
-    for (var i=0; i< phrase.length; i++){
-        var codAscii= phrase.charCodeAt(i);
+    for (var i=0; i< msg.length; i++){//for que itera para obtener el valor númerico de cada una de las letras
+        var codAscii= msg.charCodeAt(i);
+        var codNumAscii = 0
 
-    if(coAscii>=65 && codAscii <= 90) {
+        console.log(codAscii);
+        console.log(codNumAscii);
+        
+        
+
+    if((coAscii >= 65)  && (codAscii <= 90)) {
         var asciiCipherNum = ((codAscii -65 +33)% 26) + 65
       } else {
         var asciiCipherNum = ((codAscii -97 + 33) % 26) +97
