@@ -27,10 +27,10 @@ function cipher (msg) {//función para cifrar el mensaje
       } else {
         codNumAscii = ((codAscii -97 + 33) % 26) +97// fórmula para ascii minusculas
       }
-      var newLetter = String.fromCharCode(codNumAscii);
+      var newLetter = String.fromCharCode(codNumAscii);//se obtiene la nueva letra por cifrado cesar
       encryption += newLetter;
       console.log(newLetter);
       
       }
-      return encryption;
+      return document.getElementById("encrypted").innerHTML = encryption;//muestra el texto cifrado en la página
     }
