@@ -1,7 +1,7 @@
-var aUppA = (65 + 33) % 26;//ASCII para A
-var aUppZ = 90;//ASCII para Z
-var aLowA = 97;//ASCII Para a
-var aLowZ = 122;//ASCII para z
+// var aUppA = (65 + 33) % 26;//ASCII para A
+// var aUppZ = 90;//ASCII para Z
+// var aLowA = 97;//ASCII Para a
+// var aLowZ = 122;//ASCII para z
 var message = "";
 
 do {message = prompt("Ingresa una mensaje  \n ***números, carácteres extaños o espacios no son válidos***");//Se solicita al usuario que ingrese un mensaje
@@ -34,3 +34,31 @@ function cipher (msg) {//función para cifrar el mensaje
       }
       return document.getElementById("encrypted").innerHTML = encryption;//muestra el texto cifrado en la página
     }
+
+    var msgToDecipher = confirm(" Deseas descifrar un mensaje? ");
+    if( msgToDecipher === true){
+      do {
+        text = prompt("Ingresa una frase a cifrar. \n Por favor no ingreses: numeros, espacios y/o caracteres especiales"); // Se solicita al usuario el texto a cifrar, se repetira tantas veces hasta que el usuario ingrese una entrada valida
+      }
+        while (!text|| !/^[a-zA-Z]*$/.test(text)); // Condicion de validacion de entrada de texto, se repetira mientras que sea diferente a un string,o si contiene caracteres diferentes de letras mayusculas o minusculas
+        decipher(text);
+      }
+
+      function decipher (msg) {//función decifrar mensaje
+        var decryption = "";
+
+          for(var i=0; i < msg.length; i++){ // iteracion donde se obtiene el valor numerico de cada letra del texto ingresado
+            var codAscii= msg.charCodeAt(i);
+            var codNumAscii = 0
+
+            if((codAscii >= 65) && (codAscii <= 90)){ // Condicion para diferenciar mayusculas de minusculas, Si no esta dentro del rango indicado se trata de una letra minuscula, si, si se encuentra es una letra mayuscula
+              codNumAscii = ((codAscii + 65 - 33) % 26) + 65;// Aplicacion del olgaritmo cifrado Cesar, se cambian los simbolos para aplicar el descifrado del texto
+            }else{
+                codNumAscii =((codAscii + 97 + 33) % 26) + 97;
+              }
+              var newDecipher = String.fromCharCode(codNumAscii);// Se obtiene la letra del valor numerico obtenido por el algoritmo de cifrado Cesar
+              decryption += newDecipher; // Se agrega letra por letra para construir el texto descifrado
+            }
+            return document.getElementById("decrypted").innerHTML = decryption;
+        
+      }
