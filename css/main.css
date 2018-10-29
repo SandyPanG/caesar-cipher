@@ -1,3 +1,33 @@
 body {
-    background-color: green;
+    background: linear-gradient(45deg, #8fc800 0%,#8fc800 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
+.container {
+    background-color: #3f4c6b;
+    margin:10vh;
+    width: 50%;
+}
+
+.container2 {
+    background-color: #3f4c6b;
+    margin-left: 50vh;
+    margin-top: 10vh;
+    width: 50%;
+}
+
+.mb-0 {
+    color: white;
+}
+
+@media (max-width: 575.98px) { 
+    .container2 {
+        background-color: #3f4c6b;
+        margin-left: 20vh;
+        margin-top: 10vh;
+        width: 50%;
+    }
+ }
+
+/* .input-group {
+    width: 50%;
+} */

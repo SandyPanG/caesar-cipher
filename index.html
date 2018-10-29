@@ -9,11 +9,28 @@
     <title>Caesar Cipher</title>
 </head>
 <body>
-    
-    
-    <p id = "encrypted"></p>
-    
-    <p id = "decrypted"></p>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Caesar Cipher</span>
+    </nav>
+    <div class="container text-left">    
+        <blockquote class = "blockquote">
+            <p class="mb-0" id = "encrypted"></p>
+            <footer class="blockquote-footer">Mensaje cifrado <cite title="Source Title">Confidencial</cite></footer>
+        </blockquote>
+    </div>
+    <div class="container2">    
+        <blockquote class = "blockquote text-right">
+            <p class="mb-0" id = "decrypted"></p>
+            <footer class="blockquote-footer">Mensaje decifrado <cite title="Source Title">Confidencial</cite></footer>
+        </blockquote>
+    </div>
+
+
+    <!-- <div class="input-group">
+            <input type="text" class="form-control" id = "decrypted" placeholder="Ingresa un mensaje cifrado" aria-label="Ingresa un mensaje cifrado" aria-describedby="button-addon2">
+            <div class="input-group-append">
+            <button class="btn btn-success" value ="click" onclick = "validateInput" type="button" id="button-addon2">Decifrar</button>
+    </div> -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
